@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-background-title: #b52184;
+  --color-background-subtitle: #312d64;
+  --color-background: #f9f4fb;
+
+  font-size: 62.5%;
+}
+
+body,
+h1,
+h2,
+p,
+input,
+button {
+  font-family: "Mulish", sans-serif;
+}
+
+main {
+  max-width: fit-content;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.section-1 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.img-home {
+  max-width: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h1 {
+  color: var(--color-background-title);
+  font-size: 3.8rem;
+}
+
+.title p {
+  font-size: 2.2rem;
+  color: var(--color-background-subtitle);
+}
+.title img {
+  margin-top: 5rem;
+}
+
+/* section planets */
+
+.planets {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(320deg, #302c63, #343193);
+}
+
+.item figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+figcaption {
+  margin: 2rem 8rem;
+  padding: 1.6rem 3rem;
+  border-radius: 0.8rem;
+  background-color: var(--color-background);
+}
+
+figcaption h2 {
+  margin-top: 1rem;
+  font-size: 2.8rem;
+  color: var(--color-background-title);
+}
+
+figcaption p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+/* contact */
+
+.image-footer {
+  display: none;
+}
+
+.contact {
+  margin: 5rem;
+}
+
+form h1 {
+  color: var(--color-background-title);
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+form > input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--color-background-subtitle);
+  padding: 1.6rem 2.5rem;
+  border-radius: 0.8rem;
+  flex: 1;
+}
+
+form > label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.contact input,
+textarea {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+button {
+  border: 0;
+  margin-top: 3rem;
+  padding: 1.2rem;
+  background: linear-gradient(160deg, #302c63, #343193);
+  color: var(--color-background);
+  border-radius: 1.6rem;
+}
+
+/* footer */
+
+footer {
+  background: linear-gradient(160deg, #302c63, #343193);
+}
+
+footer p {
+  font-size: 1.6rem;
+  color: var(--color-background);
+  padding: 1.6rem;
+  text-align: center;
+}
+
+/* desktop */
+
+@media (min-width: 900px) {
+  .section-1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .img-home {
+    max-width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .title h1 {
+    text-align: center;
+    color: var(--color-background-title);
+    font-size: min(7rem);
+  }
+
+  .title p {
+    text-align: center;
+
+    font-size: 3.2rem;
+    color: var(--color-background-subtitle);
+  }
+  .title img {
+    margin-top: 10rem;
+  }
+
+  .planets {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(320deg, #302c63, #343193);
+  }
+
+  .item figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  figcaption {
+    margin: 10rem 8rem;
+    padding: 7rem 5rem;
+    border-radius: 1rem;
+    background-color: var(--color-background);
+  }
+
+  figcaption h2 {
+    margin-top: 1rem;
+    font-size: 3.8rem;
+    font-weight: bold;
+    color: var(--color-background-title);
+  }
+
+  figcaption p {
+    margin-top: 1rem;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+  }
+
+  .contact {
+    margin: 0 8rem;
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    width: 100%;
+  }
+  .image-footer {
+    display: grid;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  form h1 {
+    color: var(--color-background-title);
+    font-size: 4.8rem;
+    font-weight: 900;
+  }
+
+  form > input,
+  textarea {
+    width: 100%;
+    border: 1px solid var(--color-background-subtitle);
+    padding: 1.6rem 2.5rem;
+    border-radius: 0.8rem;
+    flex: 1;
+  }
+
+  form > label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+  }
+  .contact input,
+  textarea {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  button {
+    border: 0;
+    margin-top: 3rem;
+    padding: 1.2rem;
+    background: linear-gradient(160deg, #302c63, #343193);
+    color: var(--color-background);
+    border-radius: 1.6rem;
+  }
+}
